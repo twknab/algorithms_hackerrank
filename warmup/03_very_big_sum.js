@@ -30,7 +30,6 @@ When we add several integer values, the resulting sum might exceed the above ran
 
 function aVeryBigSum(n, ar) {
   let sum = 0;
-  // Complete this function
 
   // Handle constraints on n:
   if (n < 1 || n > 10 || n > ar.length || n < ar.length) {
@@ -39,7 +38,7 @@ function aVeryBigSum(n, ar) {
 
   for (var i = 0; i < n; i++) {
 
-    // Hande constraintson ar[i]:
+    // Hande constraints on ar[i]:
     if (ar[i] < 0 || ar[i] > 10000000000) {
       return undefined;
     }
@@ -49,6 +48,6 @@ function aVeryBigSum(n, ar) {
   }
 
   return sum;
-}
+};
 
 console.log(aVeryBigSum(5, [3, 10, 100, 1000, 100000]));
