@@ -58,12 +58,12 @@ function diagonalDifference(a) {
   return Math.abs((a[1][0] + a[2][1] + a[3][2]) - (a[3][0] + a[2][1] + a[1][2]))
 };
 
-// console.log(diagonalDifference(
-//   `3
-// 11 2 4
-// 4 5 6
-// 10 8 -12`
-// ));
+console.log(diagonalDifference(
+`3
+11 2 4
+4 5 6
+10 8 -12`
+));
 // => 15
 
 // If we're given the matrix of integers in advance, we can just return the values:
