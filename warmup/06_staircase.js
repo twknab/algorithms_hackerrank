@@ -1,4 +1,4 @@
-```
+/*
 Consider a staircase of size n = 4:
 
    #
@@ -36,7 +36,7 @@ Note: The last line must have 0 spaces in it.
 # Explanation
 
 The staircase is right-aligned, composed of # symbols and spaces, and has a height and width of n = 6.
-```
+*/
 
 function staircase(n) {
   // Set some variables to control our counter and to hold our string
