@@ -37,32 +37,15 @@ As you can see, the minimal sum is 1 + 2 + 3 + 4 = 10 and the maximal sum is 2 +
 */
 
 function miniMaxSum(arr) {
-  // Sort the array:
-  arr.sort(function(a, b){return a-b});
-  // console.log(arr);
-
-  // Initialize max and min variables:
-  let max = 0,
-    min = 0,
-    max_set = [],
-    min_set = [];
-
-  max_set.push(arr[4], arr[3], arr[2], arr[1]);
-  min_set.push(arr[0], arr[1], arr[2], arr[3]);
-
-  for (var i = 0; i < max_set.length; i++) {
-    max += max_set[i];
-    min += min_set[i];
+  let output = [];
+  for (let i = 0; i < arr.length; i++) {
+    let sum = 0;
+    for (let j = 0; j < arr.length; j++) {
+      sum += arr[j];
+    }
+    sum -= arr[i];
+    output.push(sum);
   }
-
-  return `${min} ${max}`;
-};
-
-function main() {
-   var arr = readLine().split(" ")
-   arr = arr.map(Number);
-   var result = miniMaxSum(arr);
-   process.stdout.write(result);
+  output = output.sort();
+  console.log(output[0], output[output.length - 1]);
 }
-
-miniMaxSum([5, 2, 3, 1, 4]);
